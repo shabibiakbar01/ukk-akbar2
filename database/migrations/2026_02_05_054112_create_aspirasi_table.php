@@ -13,7 +13,7 @@ return new class extends Migration
         $table->dateTime('tgl_pelaporan'); // Sesuai ERD
 
         // FK ke Siswa
-        $table->unsignedBigInteger('nisn');
+        $table->string('nisn',20);
         $table->foreign('nisn')->references('nisn')->on('siswa')->onDelete('cascade');
 
         // FK ke Kategori
