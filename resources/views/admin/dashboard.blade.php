@@ -100,7 +100,7 @@
     <div class="d-flex justify-content-between align-items-center mb-4">
         <div>
             <h2 style="font-weight: 800; color: var(--primary-dark);">Ringkasan Statistik</h2>
-            <p class="text-muted small">Selamat datang kembali, <strong>{{ Auth::guard('admin')->user()->username }}</strong>!</p>
+            <p class="text-muted small">Selamat datang kembali, <strong>{{ Auth::guard('admin')->user()->username ?? 'Admin' }}</strong>!</p>
         </div>
         <div class="badge bg-white text-dark border p-2 px-3 shadow-sm" style="border-radius: 10px;">
             <i class="bi bi-calendar3 me-2 text-primary"></i>{{ date('d F Y') }}

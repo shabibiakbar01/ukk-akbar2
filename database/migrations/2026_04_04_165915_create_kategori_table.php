@@ -12,10 +12,10 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('kategori', function (Blueprint $table) {
-        $table->id('id_kategori'); // Primary Key sesuai ERD
-        $table->string('nama_kategori', 50);
-        $table->timestamps();
-    });
+            $table->id('id_kategori');
+            $table->string('nama_kategori', 50);
+            $table->timestamps();
+        });
     }
 
     /**

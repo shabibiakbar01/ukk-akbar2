@@ -187,7 +187,7 @@
     <main class="main-content">
         <div class="page-header">
             <div>
-                <h4 class="fw-bold mb-1 text-primary">Halo, {{ Auth::user()->nama_lengkap }}! </h4>
+                <h4 class="fw-bold mb-1 text-primary">Halo, {{ Auth::user()->nama_lengkap ?? 'siswa '}}! </h4>
                 <p class="text-muted small mb-0">Senang melihatmu kembali hari ini.</p>
             </div>
             <div class="text-end">
