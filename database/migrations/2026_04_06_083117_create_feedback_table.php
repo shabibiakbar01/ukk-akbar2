@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id('id_feedback');
             $table->unsignedBigInteger('id_pelaporan');
             $table->unsignedBigInteger('id_admin');
-            $table->text('ket');
+            $table->text('pesan');
             $table->dateTime('tgl_feedback');
             $table->timestamps();
         });

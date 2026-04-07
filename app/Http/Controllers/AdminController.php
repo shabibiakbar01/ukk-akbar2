@@ -9,8 +9,6 @@ use App\Models\Feedback;
 use App\Models\Siswa;
 use App\Models\Kategori;
 
-
-
 class AdminController extends Controller {
 
     public function dashboard() {
@@ -53,7 +51,7 @@ class AdminController extends Controller {
         Feedback::updateOrCreate(
             ['id_pelaporan' => $id],
             [
-                'ket'          => $request->feedback,
+                'pesan'          => $request->feedback,
                 'tgl_feedback' => now(),
                 'id_admin'     => 1,
             ]

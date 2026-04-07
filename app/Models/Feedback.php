@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Feedback extends Model
 {
@@ -11,8 +12,12 @@ class Feedback extends Model
     protected $fillable = [
         'id_pelaporan',
         'id_admin',
-        'ket',
-        'tgl_feedback',        
+        'pesan',
+        'tgl_feedback',
     ];
 
+    public function aspirasi(): BelongsTo
+    {
+        return $this->belongsTo(Aspirasi::class, 'id_pelaporan');
+    }
 }

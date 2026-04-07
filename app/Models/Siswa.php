@@ -15,6 +15,8 @@ class Siswa extends Authenticatable{
     protected $keyType = 'string';
     protected $fillable = ['nisn', 'nama_lengkap', 'kelas', 'password'];
     protected $hidden = ['password']; 
+
+    
     public function aspirasis() {
         return $this->hasMany(Aspirasi::class, 'nisn', 'nisn');
     }
